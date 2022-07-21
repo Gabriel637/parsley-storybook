@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const ButtonStyled = styled.button`
-  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: ${props=> props.theme.fonts.primary};
+  font-size: ${props=> props.theme.fontSizes.md};
   font-weight: 700;
   border: 0;
   border-radius: 3em;
