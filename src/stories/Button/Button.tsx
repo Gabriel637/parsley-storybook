@@ -2,26 +2,9 @@ import React from 'react';
 import {ButtonStyled} from './button.styles';
 
 interface ButtonProps {
-  /**
-   * Is this the principal call to action on the page?
-   */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'small' | 'medium' | 'large';
-  /**
-   * Button contents
-   */
+  variant?: 'primary' | 'outlined' | 'text';
+  size?: 'sm' | 'md' | 'lg';
   label: string;
-
-  /**
-   * Optional click handler
-   */
   onClick?: () => void;
 }
 
@@ -29,18 +12,15 @@ interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
+  size='md',
+  variant='primary',
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <ButtonStyled
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
+      className={[`size--${size}`, `variant--${variant}`].join(' ')}
       {...props}
     >
       {label}

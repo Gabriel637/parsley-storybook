@@ -4,6 +4,7 @@ const theme = {
       primary: '#1DB954',
       secondary: '#ebe3e3f6',
       background: '#131416',
+      text: '#ebe3e3f6',
       white: '#ebe3e3f6',
       gray: '#919295',
       black: '#131416',
@@ -21,6 +22,11 @@ const theme = {
     sm: '14px',
     xm: '12px' 
    },
+   buttonSizes: {
+    lg: '200px',
+    md: '150px',
+    sm: '100px',
+   }
   };
 
 export default theme
