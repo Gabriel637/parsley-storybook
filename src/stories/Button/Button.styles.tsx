@@ -40,8 +40,6 @@ interface StyledButtonProps {
 
 export const ButtonStyled = styled.button<StyledButtonProps>`
   font-family: ${props => props.theme.fonts.primary};
-  font-size: ${props => props.theme.fontSizes.md};
-  width: ${props => props.theme.buttonSizes.md};
   height: 35px;
   font-weight: 600;
   border-radius: 50px;

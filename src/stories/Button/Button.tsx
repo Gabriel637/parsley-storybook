@@ -1,4 +1,4 @@
-import { ButtonStyled } from './button.styles'
+import { ButtonStyled } from './Button.styles'
 
 interface ButtonProps {
   variant?: 'primary' | 'outlined' | 'text';
