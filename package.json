@@ -1,7 +1,17 @@
 {
   "name": "parsley-storybook",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "babel": {
+    "presets": [
+      [
+        "react-app",
+        {
+          "absoluteRuntime": false
+        }
+      ]
+    ]
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -24,7 +34,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "cross-env BABEL_ENV=production babel src -d dist",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -60,6 +70,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.18.9",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
@@ -71,7 +82,9 @@
     "@storybook/react": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
     "@types/styled-components": "^5.1.25",
+    "auto": "^10.37.3",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "cross-env": "^7.0.3",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0",
@@ -79,5 +92,10 @@
     "eslint-plugin-react": "^7.30.1",
     "prop-types": "^15.8.1",
     "webpack": "^5.73.0"
-  }
+  },
+  "description": "storybook",
+  "main": "index.tsx",
+  "repository": "https://github.com/Gabriel637/parsley-storybook.git",
+  "author": "Gabriel Amorim Barbosa <37639798+Gabriel637@users.noreply.github.com>",
+  "license": "MIT"
 }
