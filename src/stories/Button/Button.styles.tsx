@@ -30,7 +30,8 @@ const colors = {
   `,
   special: css`
     background: ${props => props.theme.colors.special};
-    color: ${props => props.theme.colors.text};
+    color: ${props => props.theme.colors.main};
+    border-color: ${props => props.theme.colors.main};
   `,
   background: css`
     background: ${props => props.theme.colors.background};
