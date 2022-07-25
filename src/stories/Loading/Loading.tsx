@@ -1,13 +1,14 @@
 import { LoadingSpinner } from './Loading.styles'
-
 interface LoadingProps {
   size?: 'sm' | 'md' | 'lg';
+  variant?: 'primary' | 'text';
 }
 
 export const Loading = ({
-  size = 'sm'
+  size = 'sm',
+  variant = 'text'
 }: LoadingProps) => {
   return (
-      <LoadingSpinner size={size}/>
+      <LoadingSpinner size={size} variant={variant}/>
   )
 }

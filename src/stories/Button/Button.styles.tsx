@@ -36,6 +36,7 @@ const sizes = {
 interface StyledButtonProps {
   variant: 'primary' | 'outlined' | 'text';
   size: 'sm' | 'md' | 'lg';
+  loading: boolean;
 }
 
 export const ButtonStyled = styled.button<StyledButtonProps>`
@@ -49,6 +50,9 @@ export const ButtonStyled = styled.button<StyledButtonProps>`
   line-height: 1;
   opacity: 1;
   border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover{
     opacity: 0.75;
   }

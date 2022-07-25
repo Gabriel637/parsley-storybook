@@ -1,9 +1,18 @@
 import styled, { css } from 'styled-components'
 
+const variants = {
+  primary: css`
+  border-top-color: ${props => props.theme.colors.primary};
+  `,
+  text: css`
+  border-top-color: ${props => props.theme.colors.text};
+    `
+}
+
 const sizes = {
   sm: css`
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
   `,
   md: css`
     width: 50px;
@@ -17,6 +26,7 @@ const sizes = {
 
 interface LoadingProps {
   size: 'sm' | 'md' | 'lg';
+  variant: 'primary' | 'text';
 }
 
 export const LoadingSpinner = styled.div<LoadingProps>`
@@ -28,11 +38,11 @@ export const LoadingSpinner = styled.div<LoadingProps>`
       transform: rotate(360deg);
     }
   }
-  border: 5px solid;
+  border: 3px solid;
   border-color: transparent;
-  border-top: 5px solid;
-  border-top-color:  ${props => props.theme.colors.primary};
+  border-top: 3px solid;
   border-radius: 50%;
-  animation: spinner 1.5s linear infinite;
+  animation: spinner 0.75s linear infinite;
   ${props => sizes[props.size]}
+  ${props => variants[props.variant]}
 `
