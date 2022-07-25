@@ -2,10 +2,10 @@ const theme = {
   type: 'dark',
   colors: {
     primary: '#1DB954',
-    secondary: '#ebe3e3f6',
+    secondary: '#fff',
     background: '#131416',
-    text: '#ebe3e3f6',
-    white: '#ebe3e3f6',
+    text: '#fff',
+    white: '#fff',
     gray: '#919295',
     black: '#131416',
     error: '#f84a4b',

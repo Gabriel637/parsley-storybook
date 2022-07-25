@@ -1,26 +1,22 @@
 import styled, { css } from 'styled-components'
 
 const sizes = {
-  xs: css`
+  sm: css`
     width: 30px;
     height: 30px;
   `,
-  sm: css`
+  md: css`
     width: 50px;
     height: 50px;
   `,
-  md: css`
+  lg: css`
     width: 75px;
     height: 75px;
-  `,
-  lg: css`
-    width: 100px;
-    height: 100px;
   `
 }
 
 interface LoadingProps {
-  size: 'xs' | 'sm' | 'md' | 'lg';
+  size: 'sm' | 'md' | 'lg';
 }
 
 export const LoadingSpinner = styled.div<LoadingProps>`
@@ -32,9 +28,9 @@ export const LoadingSpinner = styled.div<LoadingProps>`
       transform: rotate(360deg);
     }
   }
-  border: 7px solid;
+  border: 5px solid;
   border-color: transparent;
-  border-top: 7px solid;
+  border-top: 5px solid;
   border-top-color:  ${props => props.theme.colors.primary};
   border-radius: 50%;
   animation: spinner 1.5s linear infinite;
