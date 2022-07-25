@@ -9,37 +9,48 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />
 
-export const Primary = Template.bind({})
-Primary.args = {
+export const Filled = Template.bind({})
+Filled.args = {
   label: 'Button'
 }
 
 export const Outlined = Template.bind({})
 Outlined.args = {
+  label: 'Button',
+  variant: 'outlined'
+}
+
+export const Alternative = Template.bind({})
+Alternative.args = {
+  label: 'Button',
+  variant: 'filled',
+  color: 'alternative'
+}
+
+export const AlternativeOutlined = Template.bind({})
+AlternativeOutlined.args = {
+  label: 'Button',
   variant: 'outlined',
-  label: 'Button'
+  color: 'alternative'
+}
+
+export const Special = Template.bind({})
+Special.args = {
+  label: 'Button',
+  variant: 'filled',
+  color: 'special'
 }
 
 export const Loading = Template.bind({})
 Loading.args = {
   label: 'Button',
+  variant: 'filled',
+  color: 'main',
   loading: true
-}
-
-export const Small = Template.bind({})
-Small.args = {
-  size: 'sm',
-  label: 'Button'
-}
-
-export const Large = Template.bind({})
-Large.args = {
-  size: 'lg',
-  label: 'Button'
 }
 
 export const Text = Template.bind({})
 Text.args = {
-  variant: 'text',
-  label: 'Button'
+  label: 'Button',
+  variant: 'text'
 }

@@ -1,18 +1,32 @@
 import styled, { css } from 'styled-components'
+import { TypeSize, TypeColor } from '../../types/index'
 
-const variants = {
-  primary: css`
-  border-top-color: ${props => props.theme.colors.primary};
+const colors = {
+  main: css`
+    border-top-color: ${props => props.theme.colors.main};
   `,
+  alternative: css`
+    border-top-color: ${props => props.theme.colors.alternative};
+    `,
   text: css`
-  border-top-color: ${props => props.theme.colors.text};
-    `
+    border-top-color: ${props => props.theme.colors.text};
+  `,
+  background: css`
+    border-top-color: ${props => props.theme.colors.background};
+  `,
+  special: css`
+    border-top-color: ${props => props.theme.colors.main};
+  `
 }
 
 const sizes = {
-  sm: css`
+  xs: css`
     width: 15px;
     height: 15px;
+`,
+  sm: css`
+    width: 30px;
+    height: 30px;
   `,
   md: css`
     width: 50px;
@@ -21,12 +35,16 @@ const sizes = {
   lg: css`
     width: 75px;
     height: 75px;
+  `,
+  xl: css`
+    width: 100px;
+    height: 100px;
   `
 }
 
 interface LoadingProps {
-  size: 'sm' | 'md' | 'lg';
-  variant: 'primary' | 'text';
+  size: TypeSize;
+  color: TypeColor;
 }
 
 export const LoadingSpinner = styled.div<LoadingProps>`
@@ -44,5 +62,5 @@ export const LoadingSpinner = styled.div<LoadingProps>`
   border-radius: 50%;
   animation: spinner 0.75s linear infinite;
   ${props => sizes[props.size]}
-  ${props => variants[props.variant]}
+  ${props => colors[props.color]}
 `

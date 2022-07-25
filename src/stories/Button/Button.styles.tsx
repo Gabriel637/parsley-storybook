@@ -1,27 +1,50 @@
 import styled, { css } from 'styled-components'
+import { TypeSize, TypeColor } from '../../types/index'
+import { VariantsButton } from './Button.types'
 
 const variants = {
-  primary: css`
-  background-color: ${props => props.theme.colors.primary};
-  color: ${props => props.theme.colors.text};
+  filled: css`
+    color: ${props => props.theme.colors.text};
   `,
   outlined: css`
-    background-color: transparent;
-    color: ${props => props.theme.colors.primary};
+    background: transparent;
     border: 1px solid;
-    border-color: ${props => props.theme.colors.primary};
     `,
   text: css`
-    background-color: transparent;
+    background: transparent;
     text-decoration: underline;
-    color: ${props => props.theme.colors.text};
     width: auto;
     height: auto;
     padding: 0;
     `
 }
 
+const colors = {
+  main: css`
+    background: ${props => props.theme.colors.main};
+    color: ${props => props.theme.colors.main};
+  `,
+  alternative: css`
+    background: ${props => props.theme.colors.alternative};
+    color: ${props => props.theme.colors.alternative};
+  `,
+  special: css`
+    background: ${props => props.theme.colors.special};
+    color: ${props => props.theme.colors.text};
+  `,
+  background: css`
+    background: ${props => props.theme.colors.background};
+    color: ${props => props.theme.colors.background};
+  `,
+  text: css`
+    background: transparent;
+  `
+}
+
 const sizes = {
+  xs: css`
+    width: ${props => props.theme.buttonSizes.xs};
+  `,
   sm: css`
     width: ${props => props.theme.buttonSizes.sm};
   `,
@@ -30,12 +53,16 @@ const sizes = {
   `,
   lg: css`
     width: ${props => props.theme.buttonSizes.lg};
+  `,
+  xl: css`
+    width: ${props => props.theme.buttonSizes.xl};
   `
 }
 
 interface StyledButtonProps {
-  variant: 'primary' | 'outlined' | 'text';
-  size: 'sm' | 'md' | 'lg';
+  variant: VariantsButton;
+  size: TypeSize;
+  color: TypeColor;
   loading: boolean;
 }
 
@@ -57,5 +84,6 @@ export const ButtonStyled = styled.button<StyledButtonProps>`
     opacity: 0.75;
   }
   ${props => sizes[props.size]}
+  ${props => colors[props.color]}
   ${props => variants[props.variant]}
 `

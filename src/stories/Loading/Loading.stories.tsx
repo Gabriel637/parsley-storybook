@@ -14,12 +14,17 @@ Small.args = {
   size: 'sm'
 }
 
+export const Alternative = Template.bind({})
+Alternative.args = {
+  color: 'alternative'
+}
+
 export const Medium = Template.bind({})
 Medium.args = {
   size: 'md'
 }
 
 export const Large = Template.bind({})
-Small.args = {
+Large.args = {
   size: 'lg'
 }

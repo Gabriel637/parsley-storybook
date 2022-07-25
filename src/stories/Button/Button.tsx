@@ -1,17 +1,21 @@
+import { TypeSize, TypeColor } from '../../types'
 import { Loading } from '../Loading/Loading'
 import { ButtonStyled } from './Button.styles'
+import { VariantsButton } from './Button.types'
 
 interface ButtonProps {
-  variant?: 'primary' | 'outlined' | 'text';
-  size?: 'sm' | 'md' | 'lg';
+  variant?: VariantsButton;
+  size?: TypeSize;
   label: string;
+  color: TypeColor;
   loading: boolean;
   onClick?: () => void;
 }
 
 export const Button = ({
   size = 'md',
-  variant = 'primary',
+  variant = 'filled',
+  color = 'main',
   loading = false,
   label,
   ...props
@@ -20,11 +24,12 @@ export const Button = ({
     <ButtonStyled
       size={size}
       variant={variant}
+      color={color}
       type="button"
       loading={loading}
       {...props}
     >
-      {!loading ? label : <Loading variant={variant === 'primary' ? 'text' : 'primary'}/>}
+      {!loading ? label : <Loading size='xs' color={variant === 'filled' ? 'text' : color}/>}
     </ButtonStyled>
   )
 }

@@ -1,14 +1,15 @@
 import { LoadingSpinner } from './Loading.styles'
+import { TypeSize, TypeColor } from '../../types/index'
 interface LoadingProps {
-  size?: 'sm' | 'md' | 'lg';
-  variant?: 'primary' | 'text';
+  size?: TypeSize;
+  color?: TypeColor;
 }
 
 export const Loading = ({
   size = 'sm',
-  variant = 'text'
+  color = 'main'
 }: LoadingProps) => {
   return (
-      <LoadingSpinner size={size} variant={variant}/>
+      <LoadingSpinner size={size} color={color}/>
   )
 }
