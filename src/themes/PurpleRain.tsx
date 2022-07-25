@@ -1,10 +1,10 @@
 const theme = {
   type: 'dark',
   colors: {
-    main: '#1DB954',
-    alternative: '#989817',
-    special: 'linear-gradient(to right, #1db954, #18a84a, #139741, #0e8638, #08762f)',
-    background: '#131416',
+    main: '#713A85',
+    alternative: '#713A85',
+    special: 'linear-gradient(to right, #713A85, #9544b0, #E088FF, #9544b0, #713A85)',
+    background: '#111113',
     text: '#ffffff',
     white: '#fff',
     gray: '#919295',
