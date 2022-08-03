@@ -3,7 +3,7 @@ const theme = {
   colors: {
     main: '#713A85',
     alternative: '#713A85',
-    special: 'linear-gradient(to right, #713A85, #9544b0, #E088FF, #9544b0, #713A85)',
+    special: 'linear-gradient(230.31deg, #B42FCA -34%, #5D12A5 100%);',
     background: '#111113',
     text: '#ffffff',
     white: '#fff',

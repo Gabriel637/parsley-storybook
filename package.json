@@ -39,7 +39,9 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "lint": "eslint src --ext js,ts,tsx",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "release": "auto shipit --base-branch=main",
+    "chromatic": "npx chromatic --project-token=26965e8f4349"
   },
   "eslintConfig": {
     "extends": [
@@ -84,6 +86,7 @@
     "@types/styled-components": "^5.1.25",
     "auto": "^10.37.3",
     "babel-plugin-named-exports-order": "^0.0.2",
+    "chromatic": "^6.7.3",
     "cross-env": "^7.0.3",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.25.2",
@@ -95,7 +98,19 @@
   },
   "description": "storybook",
   "main": "index.tsx",
-  "repository": "https://github.com/Gabriel637/parsley-storybook.git",
-  "author": "Gabriel Amorim Barbosa <37639798+Gabriel637@users.noreply.github.com>",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabriel637/parsley-storybook.git"
+  },
+  "author": {
+    "name": "Gabriel Amorim Barbosa",
+    "email": "37639798+Gabriel637@users.noreply.github.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gabriel637/parsley-storybook/issues"
+  },
+  "readme": "ERROR: No README data found!",
+  "homepage": "https://github.com/Gabriel637/parsley-storybook#readme",
+  "_id": "parsley-storybook@0.2.0"
 }

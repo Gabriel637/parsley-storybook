@@ -69,7 +69,7 @@ interface StyledButtonProps {
 
 export const ButtonStyled = styled.button<StyledButtonProps>`
   font-family: ${props => props.theme.fonts.primary};
-  height: 35px;
+  height: 40px;
   font-weight: 600;
   border-radius: 50px;
   transition: all 200ms ease-out;
