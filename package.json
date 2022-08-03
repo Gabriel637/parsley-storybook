@@ -1,6 +1,6 @@
 {
   "name": "parsley-storybook",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": false,
   "babel": {
     "presets": [
@@ -111,6 +111,5 @@
     "url": "https://github.com/Gabriel637/parsley-storybook/issues"
   },
   "readme": "ERROR: No README data found!",
-  "homepage": "https://github.com/Gabriel637/parsley-storybook#readme",
-  "_id": "parsley-storybook@0.2.0"
+  "homepage": "https://github.com/Gabriel637/parsley-storybook#readme"
 }
