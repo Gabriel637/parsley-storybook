@@ -6,9 +6,9 @@ import { VariantsButton } from './Button.types'
 interface ButtonProps {
   variant?: VariantsButton;
   size?: TypeSize;
-  label: string;
-  color: TypeColor;
-  loading: boolean;
+  label?: string;
+  color?: TypeColor;
+  loading?: boolean;
   onClick?: () => void;
 }
 
@@ -17,7 +17,7 @@ export const Button = ({
   variant = 'filled',
   color = 'main',
   loading = false,
-  label,
+  label = 'Ok',
   ...props
 }: ButtonProps) => {
   return (
@@ -33,3 +33,5 @@ export const Button = ({
     </ButtonStyled>
   )
 }
+
+export default Button
